@@ -1,0 +1,106 @@
+
+/* Full page setup */
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F6FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  width: 90%;
+  max-width: 500px;
+}
+
+.scrambled-word {
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-check {
+  background-color: #3A6EA5;
+  color: white;
+}
+
+.btn-next {
+  background-color: #00A676;
+  color: white;
+}
+
+.correct {
+  color: #00A676;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.wrong {
+  color: #3A6EA5;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hint {
+  margin-top: 10px;
+  font-style: italic;
+  color: #1A202C;
+}
+
+.show-hint-btn {
+  background: none;
+  color: #3A6EA5;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.select-container {
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}

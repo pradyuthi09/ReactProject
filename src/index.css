@@ -1,16 +1,158 @@
-
 /* Full page setup */
 body, html {
   height: 100%;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #F5F6FA;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(-45deg, #3A6EA5, #00A676, #F5F6FA, #1A202C);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  transition: background 0.5s ease;
 }
 
-/* Optional: smooth font rendering */
+/* Smooth font rendering and box-sizing */
 * {
   box-sizing: border-box;
+}
+
+/* Game container card */
+.game-container {
+  background-color: #ffffff;
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Scrambled word styling */
+.scrambled-word {
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: #3A6EA5;
+  transition: color 0.3s ease;
+}
+
+.scrambled-word:hover {
+  color: #00A676;
+}
+
+/* Input box styling */
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #3A6EA5;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #00A676;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 166, 118, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-check {
+  background-color: #3A6EA5;
+  color: white;
+}
+
+.btn-next {
+  background-color: #00A676;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Feedback */
+.correct {
+  color: #00A676;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.wrong {
+  color: #3A6EA5;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hint button */
+.show-hint-btn {
+  background: none;
+  color: #3A6EA5;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.show-hint-btn:hover {
+  color: #00A676;
+  transform: scale(1.05);
+}
+
+/* Score display */
+.score {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1A202C;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Difficulty selector */
+.select-container {
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+  border: 1px solid #3A6EA5;
+  font-size: 14px;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+select:hover, select:focus {
+  border-color: #00A676;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Animations */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
